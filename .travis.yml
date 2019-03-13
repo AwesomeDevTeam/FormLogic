@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '8'
+deploy:
+  provider: npm
+  email: supersnager@gmail.com
+  api_key:
+    secure:
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
