@@ -1,3 +1,4 @@
+import immutableObject from "./immutableObject";
 import FormField from "./FormField";
 
 /**
@@ -23,7 +24,7 @@ function TextareaFormField(p) {
   const errorMessage = typeof p.errorMessage === "string" ? p.errorMessage : "";
   const valueAs = typeof p.valueAs === "function" ? p.valueAs : (v) => v;
 
-  return Object.freeze(Object.create(TextareaFormField.prototype,{
+  return immutableObject(TextareaFormField.prototype,{
 
     label: { value: label },
     name: { value: name},
@@ -34,19 +35,18 @@ function TextareaFormField(p) {
     errorMessage: { value: errorMessage },
     setValue: { value: v =>
       TextareaFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          valueAs
-        }
-      )}
-  }));
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        valueAs
+      })
+    }
+  });
 }
-TextareaFormField.prototype = Object.freeze(Object.create(FormField.prototype));
-
+TextareaFormField.prototype = immutableObject(FormField.prototype);
 
 export default TextareaFormField;

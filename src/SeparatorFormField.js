@@ -14,12 +14,11 @@ function SeparatorFormField(p) {
   return immutableObject(SeparatorFormField.prototype,{
     content : { value: content},
     name: { value: name},
-    setValue: { value: function(v) {
-      return SeparatorFormField({
-          content,
-          name
-        }
-      )}}
+    setValue: { value: () =>
+      SeparatorFormField({
+        content,
+        name
+      })}
   });
 }
 SeparatorFormField.prototype = immutableObject(FormField.prototype);

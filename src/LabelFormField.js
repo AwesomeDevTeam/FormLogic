@@ -14,12 +14,11 @@ function LabelFormField(p) {
   return immutableObject(LabelFormField.prototype,{
     content : { value: content},
     name: { value: name},
-    setValue: { value: function(v) {
-      return LabelFormField({
-          content,
-          name
-        }
-      )}}
+    setValue: { value: () =>
+      LabelFormField({
+        content,
+        name
+      })}
   });
 }
 LabelFormField.prototype = immutableObject(FormField.prototype);

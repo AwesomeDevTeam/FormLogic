@@ -1,4 +1,4 @@
-import immutableObject from "./SliderFormField";
+import immutableObject from "./immutableObject";
 import FormField from "./FormField";
 
 /**
@@ -45,20 +45,19 @@ function SliderFormField(p) {
     step: { value: step},
     setValue: { value: v =>
       SliderFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          nullable,
-          minValue,
-          maxValue,
-          step,
-          valueAs
-        }
-      )}
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        nullable,
+        minValue,
+        maxValue,
+        step,
+        valueAs
+      })}
   });
 }
 SliderFormField.prototype = immutableObject(FormField.prototype);

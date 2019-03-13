@@ -45,20 +45,19 @@ function DropdownFormField(p) {
     sarch: { value: search},
     setValue: { value: v =>
       DropdownFormField({
-          items,
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          nullable,
-          placeholder,
-          search,
-          valueAs
-        }
-      )}
+        items,
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        nullable,
+        placeholder,
+        search,
+        valueAs
+      })}
   });
 
 }

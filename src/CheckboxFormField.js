@@ -38,32 +38,30 @@ function CheckboxFormField(p) {
     checked: { value: checked },
     setValue: { value: v =>
       CheckboxFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          nullable,
-          checked,
-          valueAs
-        }
-      )},
-    setChecked: { value: c => {
-      return CheckboxFormField({
-          label,
-          name,
-          value,
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          nullable,
-          checked: c,
-          valueAs
-        }
-      )}}/*,
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        nullable,
+        checked,
+        valueAs
+      })},
+    setChecked: { value: c =>
+      CheckboxFormField({
+        label,
+        name,
+        value,
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        nullable,
+        checked: c,
+        valueAs
+      })}/*,
      setIndeterminate: {
      value: c=> {
 

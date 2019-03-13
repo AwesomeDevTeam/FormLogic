@@ -1,5 +1,5 @@
+import immutableObject from "./immutableObject";
 import FormField from "./FormField";
-
 
 /**
  * @param {Object} p Parameters object
@@ -24,7 +24,7 @@ function PasswordFormField(p) {
   const errorMessage = typeof p.errorMessage === "string" ? p.errorMessage : "";
   const valueAs = typeof p.valueAs === "function" ? p.valueAs : (v) => v;
 
-  return Object.freeze(Object.create(PasswordFormField.prototype,{
+  return immutableObject(PasswordFormField.prototype,{
 
     label: { value: label },
     name: { value: name},
@@ -35,18 +35,17 @@ function PasswordFormField(p) {
     errorMessage: { value: errorMessage},
     setValue: { value: v =>
       PasswordFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          valueAs
-        }
-      )}
-  }));
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        valueAs
+      })}
+  });
 }
-PasswordFormField.prototype = Object.freeze(Object.create(FormField.prototype));
+PasswordFormField.prototype = immutableObject(FormField.prototype);
 
 export default PasswordFormField;

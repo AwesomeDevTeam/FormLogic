@@ -19,7 +19,8 @@ import Form from "./Form";
 
 export {
   Form,
-  FormTab
+  FormTab,
+  FormField,
   TextFormField,
   LabelFormField,
   HiddenFormField,

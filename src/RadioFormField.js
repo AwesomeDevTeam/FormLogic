@@ -37,8 +37,9 @@ function RadioFormField(p) {
     valid: { value: valid},
     errorMessage: { value: errorMessage},
     nullable: { value: nullable},
-    setValue: { value: v =>
-      RadioFormField({
+    setValue: {
+      value: v =>
+        RadioFormField({
           items,
           label,
           name,
@@ -49,8 +50,8 @@ function RadioFormField(p) {
           errorMessage,
           nullable,
           valueAs
-        }
-      )}
+        })
+    }
   });
 
 }

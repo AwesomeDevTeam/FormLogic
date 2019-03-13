@@ -52,24 +52,23 @@ function CalendarFormField(p) {
     maxTime: { value: maxTime},
     placeholder: { value: placeholder },
     setValue: { value: v =>
-      SliderFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          nullable,
-          minDate,
-          maxDate,
-          minTime,
-          maxTime,
-          dateTimeFormat,
-          placeholder,
-          valueAs
-        }
-      )}
+      CalendarFormField({
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        nullable,
+        minDate,
+        maxDate,
+        minTime,
+        maxTime,
+        dateTimeFormat,
+        placeholder,
+        valueAs
+      })}
   });
 
 }

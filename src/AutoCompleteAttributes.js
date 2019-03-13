@@ -4,7 +4,7 @@ import immutableObject from "./immutableObject";
 /**
  * @enum AutoCompleteAttributes
  */
-export default AutoCompleteAttributes = immutableObject(null, {
+export default immutableObject(null, {
   On: { value: "on", enumerable: true },
   Off: { value: "off", enumerable: true },
 

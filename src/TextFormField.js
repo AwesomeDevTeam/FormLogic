@@ -1,4 +1,6 @@
+import immutableObject from "./immutableObject";
 import FormField from "./FormField";
+import AutoCompleteAttributes from "./AutoCompleteAttributes";
 
 /**
  * @param {Object} p Parameters object
@@ -26,7 +28,7 @@ function TextFormField(p) {
   const autoComplete = typeof p.autoComplete === "string" ? p.autoComplete : AutoCompleteAttributes.On;
   const valueAs = typeof p.valueAs === "function" ? p.valueAs : (v) => v;
 
-  return Object.freeze(Object.create(TextFormField.prototype,{
+  return immutableObject(TextFormField.prototype,{
 
     label: { value: label },
     name: { value: name},
@@ -39,19 +41,18 @@ function TextFormField(p) {
     autoComplete: { value: autoComplete },
     setValue: { value: v =>
       TextFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          errorMessage,
-          icon,
-          autoComplete,
-          valueAs
-        }
-      )}
-  }));
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        errorMessage,
+        icon,
+        autoComplete,
+        valueAs
+      })}
+  });
 }
 TextFormField.prototype = Object.freeze(Object.create(FormField.prototype));
 

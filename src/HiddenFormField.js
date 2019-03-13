@@ -10,7 +10,7 @@ import FormField from "./FormField";
 function HiddenFormField(p) {
 
   const { name } = p;
-  const valueType = typeof p.value;
+  //const valueType = typeof p.value;
   /*if (  valueType !== "undefined" && valueType !== "string" ) {
    throw "Field value must be string or undefined";
    }*/
@@ -24,11 +24,10 @@ function HiddenFormField(p) {
 
     setValue: { value: v =>
       HiddenFormField({
-          name,
-          value: valueAs(v),
-          valueAs
-        }
-      )}
+        name,
+        value: valueAs(v),
+        valueAs
+      })}
   }));
 }
 HiddenFormField.prototype = Object.freeze(Object.create(FormField.prototype));

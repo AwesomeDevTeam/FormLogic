@@ -22,7 +22,7 @@ function Form(p) {
           return tab.fields.reduce((prevField, field) => {
 
             if (prevField) {
-              return prevField
+              return prevField;
             } else {
               if (field.name === name) {
                 return field;

@@ -39,19 +39,18 @@ function CustomFormField(p) {
     componentRef: { value: p.componentRef },
     setValue: { value: v =>
       CustomFormField({
-          label,
-          name,
-          value: valueAs(v),
-          required,
-          disabled,
-          valid,
-          component,
-          errorMessage,
-          valueAs,
-          componentParams,
-          componentRef: p.componentRef
-        }
-      )}
+        label,
+        name,
+        value: valueAs(v),
+        required,
+        disabled,
+        valid,
+        component,
+        errorMessage,
+        valueAs,
+        componentParams,
+        componentRef: p.componentRef
+      })}
   });
 }
 CustomFormField.prototype = immutableObject(FormField.prototype);
