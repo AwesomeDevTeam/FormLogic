@@ -1,6 +1,6 @@
 {
   "name": "@adt/form-logic",
-  "version": "0.0.1-SNAPSHOT.0",
+  "version": "0.0.1-SNAPSHOT.1",
   "description": "Forms abstraction layer",
   "main": "dist/FormLogic.js",
   "module": "dist/FormLogic.esm.js",
