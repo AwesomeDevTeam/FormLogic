@@ -1,0 +1,46 @@
+{
+  "name": "@adt/form-logic",
+  "version": "0.0.1-SNAPSHOT.0",
+  "description": "Forms abstraction layer",
+  "main": "dist/FormLogic.js",
+  "module": "dist/FormLogic.esm.js",
+  "browser": "dist/FormLogic.umd.js",
+  "scripts": {
+    "test": "jasmine",
+    "build": "rollup -c",
+    "eslint": "eslint src/*",
+    "prebuild": "npm run eslint",
+    "pretest": "npm run build"
+  },
+  "keywords": [
+    "form",
+    "logic",
+    "abstraction"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.3.4",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "eslint": "^5.14.1",
+    "jasmine": "^3.3.1",
+    "rollup": "^1.3.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-node-resolve": "^4.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AwesomeDevTeam/FormLogic.git"
+  }
+}
